@@ -24,15 +24,15 @@ function Home() {
         <Card
           to="/newsfeed"
           icon={<BiNews />}
-          title="Add Post"
+          title="Add Post or Announcement"
           subtitle=" to add or post the latest news and updates for your student's newsfeed! Alert students with events and announcement."
           color="#F0F7F6"
         />
         <Card
           to="/clubs"
           icon={<MdOutlineGroups2 />}
-          title="View Clubs"
-          subtitle=" to explore educational clubs and discover new opportunities to learn and grow for your students."
+          title="Add Clubs"
+          subtitle=" to add educational clubs and discover new opportunities to learn and grow for your students."
           color="#F0F4FA"
         />
         <Card

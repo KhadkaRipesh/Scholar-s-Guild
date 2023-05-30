@@ -6,6 +6,8 @@
     /* margin-left: 10px; */
     border-radius: 10px;
     padding: 10px;
+    box-shadow: #3d89f31a 0px 0px 0px 1px;
+
     /* margin-right: 10px; */
 }
 .iconWithTable{

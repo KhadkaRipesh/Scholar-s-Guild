@@ -11,7 +11,7 @@ const routes = [
   {},
   { path: "/", icon: <RxDashboard />, text: "Home" },
   { path: "/newsfeed", icon: <TfiAnnouncement />, text: "Add Post" },
-  { path: "/clubs", icon: <AiOutlineTeam />, text: "View Clubs" },
+  { path: "/clubs", icon: <AiOutlineTeam />, text: "Add Clubs" },
   { path: "/calender", icon: <AiOutlineCalendar />, text: "Add Event" },
   { path: "/about", icon: <MdOutlineSchool />, text: "About" },
 ];

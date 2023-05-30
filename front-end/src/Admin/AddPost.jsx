@@ -11,10 +11,10 @@ function AddPost() {
     setUserName(data);
   }, []);
 
-
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   let data = { title, description, userName };
+  console.log(data);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -64,7 +64,6 @@ function AddPost() {
         </button>
       </form>
       <h1>Added Post or Announcement.</h1>
-      
     </>
   );
 }

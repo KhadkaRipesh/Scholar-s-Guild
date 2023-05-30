@@ -28,13 +28,14 @@ label {
 }
 
 button[type="submit"] {
-  background-color: #007bff;
+  background-color: #008cba;
   color: #fff;
   padding: 8px 16px;
   border: none;
   border-radius: 4px;
   font-size: 16px;
   cursor: pointer;
+  margin-left: 40px;
 }
 
 button[type="submit"]:hover {

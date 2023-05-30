@@ -22,10 +22,10 @@ a {
   color: #141924;
 }
 .nav:hover {
-  color: #097bfd;
+  color: #008CBA;
 }
 .navActive {
-  color: #097bfd;
+  color: #008CBA;
   background-color: rebeccapurple;
 }
 
