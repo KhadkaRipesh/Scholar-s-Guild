@@ -1,17 +1,22 @@
 import { PlusOutlined } from "@ant-design/icons";
-import { Button, Col, Drawer, Form, Input, Row, Select, Space } from "antd";
-import { DatePicker } from "antd";
+import { Button, Col, Drawer, Form, Input, Row, Space } from "antd";
 import { useState } from "react";
 import styles from "./AddEvent.module.css";
+import DatePicker from "react-datepicker";
+
+import "react-datepicker/dist/react-datepicker.css";
 
 const onChange = (date, dateString) => {
   console.log(date, dateString);
 };
 const AddEvent = () => {
-  const [clubName, setClubName] = useState("");
-  const [clubDescription, setClubDescription] = useState("");
-
-  let data = { clubName, clubDescription };
+  const [eventName, setEventName] = useState("");
+  const [eventDescription, setEventDescription] = useState("");
+  const [startDate, setStartDate] = useState(new Date());
+  const [time, setTime] = useState("");
+  const [duration, setDuration] = useState("");
+  const [location, setLocation] = useState("");
+  let data = { eventName, eventDescription };
   console.log(data);
 
   const [open, setOpen] = useState(false);
@@ -73,9 +78,9 @@ const AddEvent = () => {
               >
                 <Input
                   placeholder="Event Title"
-                  value={clubName}
+                  value={eventName}
                   onChange={(event) => {
-                    setClubName(event.target.value);
+                    setEventName(event.target.value);
                   }}
                 />
               </Form.Item>
@@ -96,16 +101,16 @@ const AddEvent = () => {
                 <Input.TextArea
                   rows={4}
                   placeholder="Event Description."
-                  value={clubDescription}
+                  value={eventDescription}
                   onChange={(event) => {
-                    setClubDescription(event.target.value);
+                    setEventDescription(event.target.value);
                   }}
                 />
               </Form.Item>
             </Col>
           </Row>
           <Row gutter={16}>
-            <Col span={12}>
+            <Col span={8}>
               <Form.Item
                 name="date"
                 label="Date"
@@ -116,7 +121,72 @@ const AddEvent = () => {
                   },
                 ]}
               >
-                <DatePicker onChange={onChange} />
+                <DatePicker
+                  selected={startDate}
+                  onChange={(date) => setStartDate(date)}
+                />
+              </Form.Item>
+            </Col>
+            <Col span={8}>
+              <Form.Item
+                name="time"
+                label="Time"
+                rules={[
+                  {
+                    required: true,
+                    message: "please enter event time",
+                  },
+                ]}
+              >
+                <Input
+                  placeholder="Event Time"
+                  value={time}
+                  onChange={(event) => {
+                    setTime(event.target.value);
+                  }}
+                />
+              </Form.Item>
+            </Col>
+            <Col span={8}>
+              <Form.Item
+                name="duration"
+                label="Duration"
+                rules={[
+                  {
+                    required: true,
+                    message: "please enter event duration",
+                  },
+                ]}
+              >
+                <Input
+                  placeholder="Event Duration"
+                  value={duration}
+                  onChange={(event) => {
+                    setDuration(event.target.value);
+                  }}
+                />
+              </Form.Item>
+            </Col>
+          </Row>
+          <Row gutter={16}>
+            <Col span={12}>
+              <Form.Item
+                name="location"
+                label="Location"
+                rules={[
+                  {
+                    required: true,
+                    message: "Please enter event location",
+                  },
+                ]}
+              >
+                <Input
+                  placeholder="Event Location"
+                  value={location}
+                  onChange={(event) => {
+                    setLocation(event.target.value);
+                  }}
+                />
               </Form.Item>
             </Col>
           </Row>

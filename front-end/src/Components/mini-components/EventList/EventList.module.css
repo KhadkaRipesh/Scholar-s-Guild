@@ -1,0 +1,41 @@
+.table tbody tr {
+  margin-bottom: 10px;
+}
+.table tbody th,
+.table tbody td {
+  border: none;
+  padding: 18px;
+  font-size: 14px;
+  background: #fff;
+  border-bottom: 4px solid #f8f9fd;
+  vertical-align: middle;
+  height: 43px;
+}
+
+td .info span {
+  display: block;
+  font-size: 16px;
+  font-weight: 900;
+}
+td .info span:last-child {
+  font-size: 12px;
+  color: rgba(15, 13, 13, 0.904);
+}
+
+.slide h2 {
+  text-align: center;
+  font-size: 32px;
+}
+.del {
+  justify-content: center;
+  height: 30px;
+  text-align: center;
+}
+.edi{
+  text-align: center;
+}
+button.close {
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+}

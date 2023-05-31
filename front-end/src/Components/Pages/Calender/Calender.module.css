@@ -1,0 +1,30 @@
+.table thead.thead {
+    border-collapse: collapse;
+    background: #008cba;
+  }
+  .table thead th {
+    border: none;
+    padding: 18px;
+    font-size: 14px;
+    font-weight: 500;
+    color: white;
+  }
+  table {
+    min-width: 1000px !important;
+    width: 100%;
+    background: #fff;
+    -webkit-box-shadow: 0px 5px 12px -12px rgba(0, 0, 0, 0.29);
+    -moz-box-shadow: 0px 5px 12px -12px rgba(0, 0, 0, 0.29);
+    box-shadow: 0px 5px 12px -12px rgba(0, 0, 0, 0.29);
+  }
+  .table tbody th,
+  .table tbody td {
+    border: none;
+    padding: 18px;
+    font-size: 14px;
+    background: #fff;
+    border-bottom: 4px solid #f8f9fd;
+    vertical-align: middle;
+    height: 43px;
+  }
+  

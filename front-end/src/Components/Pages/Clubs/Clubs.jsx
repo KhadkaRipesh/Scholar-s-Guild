@@ -12,7 +12,7 @@ function Clubs() {
     <>
       <TopNav />
       <AddClub />
-      <h1>List of the Clubs</h1>
+      <h1>CLubs List</h1>
       <table className={styles.table}>
         <thead className={styles.thead}>
           <tr>
