@@ -5,6 +5,11 @@ function ClubList(props) {
     <>
       <tr>
         <td>
+          <span className={styles.img}>
+            <img src={props.image} alt="" className={styles.logo} />
+          </span>
+        </td>
+        <td>
           <div className={styles.info}>
             <span>{props.name}</span>
             <span>{props.description}</span>

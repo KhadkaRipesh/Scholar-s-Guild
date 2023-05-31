@@ -60,12 +60,9 @@ function TopNav() {
           {/* <div className="pn">{userName}</div> */}
           <div className="pn">Admin</div>
         </div>
-        <div className={styles.line}></div>
 
         <ul>
-          <NavLink to="/">
-            <DropdownItems icon={<CgProfile />} text="My Profile" />
-          </NavLink>
+          
           <div className={styles.line}></div>
               <NavLink to="/signIn">
           <DropdownItems onClick={logout} icon={<FiLogOut />} text="Logout" />

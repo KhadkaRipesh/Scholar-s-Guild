@@ -7,17 +7,16 @@ import About from "./Components/Pages/About/About";
 import Calender from "./Components/Pages/Calender/Calender";
 import { useEffect, useState } from "react";
 import Signin from "./Components/SigninLogin/Signin";
-import Register from "./Components/SigninLogin/Register";
 import Privateroute from "./Components/Privateroute";
 import Admin from "./Admin/admin";
 function App() {
-  const [isAuthenticated, setIsAuthenticated] = useState("True");
-  // useEffect(() => {
-  //   const data = localStorage.getItem("isAdmin");
-  //   if (data === "Member") {
-  //     setIsAuthenticated(data);
-  //   }
-  // }, []);
+  const [isAuthenticated, setIsAuthenticated] = useState("yedi token ayo");
+  useEffect(() => {
+    const data = localStorage.getItem("loggedIn");
+    if (data) {
+      setIsAuthenticated(data);
+    }
+  }, []);
   return (
     <div className="App">
       <div className="left">{isAuthenticated && <Nav />}</div>
@@ -32,7 +31,6 @@ function App() {
           </Route>
           <Route path="/admin" element={<Admin />} />
           <Route path="/signin" element={<Signin />} />
-          <Route path="/register" element={<Register />} />
           <Route path="*" element={<h1>Page not found.</h1>} />
         </Routes>
       </div>

@@ -36,3 +36,13 @@ button.close {
   width: 30px;
   cursor: pointer;
 }
+.logo {
+  height: 40px;
+  width: 40px;
+  justify-content: center;
+  display: flex;
+}
+span.img{
+  display: flex;
+  justify-content: center;
+}

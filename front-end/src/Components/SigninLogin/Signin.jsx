@@ -27,18 +27,11 @@ function Signin() {
         console.log(response);
         console.log(response.data);
         console.log(response.data.token); // log the entire response data object
-        const user = response.data.role;
-        console.log(user);
         localStorage.setItem("loggedIn", response.data.token);
         localStorage.setItem("userName", response.data.name);
-        localStorage.setItem("isAdmin", response.data.role);
-        if (user == "Admin") {
-          navigateTo("/admin");
-          window.location.reload();
-        } else {
-          navigateTo("/");
-          window.location.reload();
-        }
+
+        navigateTo("/");
+        window.location.reload();
         // Set Authorization header in axios
         axios.defaults.headers.common[
           "Authorization"

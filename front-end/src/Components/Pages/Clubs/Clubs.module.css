@@ -27,3 +27,6 @@ table {
   vertical-align: middle;
   height: 43px;
 }
+th.image{
+  width: 85px;
+}

@@ -16,7 +16,14 @@ const AddEvent = () => {
   const [time, setTime] = useState("");
   const [duration, setDuration] = useState("");
   const [location, setLocation] = useState("");
-  let data = { eventName, eventDescription };
+  let data = {
+    eventName,
+    eventDescription,
+    startDate,
+    time,
+    duration,
+    location,
+  };
   console.log(data);
 
   const [open, setOpen] = useState(false);

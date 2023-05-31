@@ -4,8 +4,16 @@ import AddClub from "../../mini-components/AddClub/AddClub";
 import ClubList from "../../mini-components/ClubList/ClubList";
 import styles from "./Clubs.module.css";
 const clubs = [
-  { name: "Coder's Club", description: "This is a coders club" },
-  { name: "Sport's Club", description: "This is a sports club." },
+  {
+    image: "blob:http://localhost:5173/5d2770c3-6a4b-47d4-a7ed-05d0c8088fbe",
+    name: "Coder's Club",
+    description: "This is a coders club",
+  },
+  {
+    image: "blob:http://localhost:5173/5d2770c3-6a4b-47d4-a7ed-05d0c8088fbe",
+    name: "Sport's Club",
+    description: "This is a sports club.",
+  },
 ];
 function Clubs() {
   return (
@@ -16,6 +24,7 @@ function Clubs() {
       <table className={styles.table}>
         <thead className={styles.thead}>
           <tr>
+            <th className={styles.image}>Club Image</th>
             <th>Club Name</th>
             <th>&nbsp;</th>
           </tr>
@@ -25,6 +34,7 @@ function Clubs() {
             return (
               <ClubList
                 key={index}
+                image={route.image}
                 name={route.name}
                 description={route.description}
               />
