@@ -1,20 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import TopNav from "../../mini-components/TopNav/TopNav";
 import AddClub from "../../mini-components/AddClub/AddClub";
 import ClubList from "../../mini-components/ClubList/ClubList";
 import styles from "./Clubs.module.css";
-const clubs = [
-  {
-    image: "blob:http://localhost:5173/5d2770c3-6a4b-47d4-a7ed-05d0c8088fbe",
-    name: "Coder's Club",
-    description: "This is a coders club",
-  },
-  {
-    image: "blob:http://localhost:5173/5d2770c3-6a4b-47d4-a7ed-05d0c8088fbe",
-    name: "Sport's Club",
-    description: "This is a sports club.",
-  },
-];
+const [clubs, setClubs] = useState([]);
+useEffect(() => {
+  axios
+    .get("http://localhost:4000/api/records")
+    .then((response) => {
+      const clubs = response.data.map((record) => {
+        return {
+          image: record.image,
+          name: record.name,
+          description: record.description,
+        };
+      });
+      setClubs(clubs);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+}, []);
+
 function Clubs() {
   return (
     <>
@@ -42,8 +49,6 @@ function Clubs() {
           })}
         </tbody>
       </table>
-      {/* map use garera club details line 
-      components using props ClubList and Display the clubs list.*/}
     </>
   );
 }
